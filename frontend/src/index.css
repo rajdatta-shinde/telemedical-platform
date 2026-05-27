@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #3b82f6;
+}
+
+.active hr {
+  display: block;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+.hover\:bg-primary\/90:hover {
+  background-color: rgba(59, 130, 246, 0.9);
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+/* Multi-line text truncation using modern CSS */
+.line-clamp-3 {
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Fallback for older browsers */
+  max-height: 4.5em;
+  position: relative;
+}
