@@ -30,7 +30,7 @@ const ResetPassword = () => {
 
     setIsLoading(true)
     try {
-      const api = axios.create({ baseURL: import.meta?.env?.VITE_API_URL || 'http://localhost:4000' })
+      const api = axios.create({ baseURL: import.meta.env.VITE_API_URL || 'http://localhost:4000' })
       await api.post('/auth/reset-password', { token, password: form.password })
       setSuccess(true)
       setTimeout(() => navigate('/login'), 2500)

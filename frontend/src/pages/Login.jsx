@@ -31,7 +31,7 @@ const Login = () => {
     if (!forgotEmail) return
     setForgotState('loading')
     try {
-      const api = axios.create({ baseURL: import.meta?.env?.VITE_API_URL || 'http://localhost:4000' })
+      const api = axios.create({ baseURL: import.meta.env.VITE_API_URL || 'http://localhost:4000' })
       const res = await api.post('/auth/forgot-password', { email: forgotEmail })
       if (res.data.resetToken) {
         setResetLink(`/reset-password/${res.data.resetToken}`)
@@ -98,7 +98,7 @@ const Login = () => {
     if (!validateForm()) return
 
     try {
-      const api = axios.create({ baseURL: import.meta?.env?.VITE_API_URL || 'http://localhost:4000' })
+      const api = axios.create({ baseURL: import.meta.env.VITE_API_URL || 'http://localhost:4000' })
       if (isLogin) {
         const res = await api.post('/auth/login', {
           email: formData.email,
