@@ -23,6 +23,10 @@ yarn-error.log*
 backend/data/db.json
 backend/data/db.backup-*.json
 
+# tooling
+.claude/
+.vercel/
+
 # os / editor
 .DS_Store
 .idea/
