@@ -56,12 +56,19 @@ const Appointment = () => {
     setSelectedDayIdx(0)
     setSelectedTime(null)
 
-    const today = new Date()
-    today.setHours(0, 0, 0, 0)
+    const start = new Date()
+    start.setHours(0, 0, 0, 0)
+    // If every slot today has already passed, roll the window forward to tomorrow.
+    const lastSlot = TIME_SLOTS[TIME_SLOTS.length - 1]
+    const lastSlotToday = new Date()
+    lastSlotToday.setHours(lastSlot.h, lastSlot.m, 0, 0)
+    if (Date.now() > lastSlotToday.getTime()) {
+      start.setDate(start.getDate() + 1)
+    }
     const next7 = []
     for (let i = 0; i < 7; i++) {
-      const d = new Date(today)
-      d.setDate(today.getDate() + i)
+      const d = new Date(start)
+      d.setDate(start.getDate() + i)
       next7.push(d)
     }
     setDays(next7)
