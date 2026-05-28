@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 
 .vercel
+
+# Local-only logo experiments, not used by the app
+src/assets/logo2.png
+src/assets/logo3.png
