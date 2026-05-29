@@ -65,7 +65,7 @@ const AdminAppointments = () => {
   return (
     <div className="flex min-h-screen bg-gray-50">
       <AdminSidebar />
-      <div className="flex-1 p-8 ml-64">
+      <div className="flex-1 min-w-0 p-4 sm:p-6 lg:p-8 ml-0 lg:ml-64">
         <h1 className="text-2xl font-bold text-gray-800 mb-4">All Appointments</h1>
 
         <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">

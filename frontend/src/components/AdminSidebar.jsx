@@ -19,7 +19,11 @@ import { assets } from "../assets/assets";
 const AdminSidebar = () => {
     const location = useLocation();
     const { logout } = useAuth();
-    const [isOpen, setIsOpen] = useState(true);
+    // Start open on desktop, closed on mobile/tablet so the panel doesn't flash
+    // over the content on small screens before the effect runs.
+    const [isOpen, setIsOpen] = useState(
+        typeof window === "undefined" ? true : window.innerWidth >= 1024
+    );
 
     // Doctor Management is a grouped section. Keep it expanded by default when
     // the active route already lives inside it so the admin can see where they are.

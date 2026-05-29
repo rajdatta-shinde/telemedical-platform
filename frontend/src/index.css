@@ -6,6 +6,12 @@
   --primary: #3b82f6;
 }
 
+/* Guard against accidental horizontal scrolling on small screens */
+html,
+body {
+  overflow-x: hidden;
+}
+
 .active hr {
   display: block;
 }
