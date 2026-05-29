@@ -77,8 +77,8 @@ const RemoveDoctor = () => {
       <AdminSidebar />
       <div className="flex-1 min-w-0 p-4 sm:p-6 lg:p-8 ml-0 lg:ml-64">
         <div className="max-w-6xl">
-          <h1 className="text-2xl font-bold text-gray-800 mb-1">Remove Doctor</h1>
-          <p className="text-sm text-gray-500 mb-6">
+          <h1 className="text-2xl font-bold text-gray-800 mb-1 text-center sm:text-left">Remove Doctor</h1>
+          <p className="text-sm text-gray-500 mb-6 text-center sm:text-left">
             Deactivate a doctor to hide them from the patient listing and booking pages.
             Their record and past appointments stay in the database and can be restored anytime.
           </p>

@@ -98,7 +98,7 @@ const AdminDashboard = () => {
       <AdminSidebar />
       <div className="flex-1 min-w-0 p-4 sm:p-6 lg:p-8 ml-0 lg:ml-64">
         <div className="mb-6">
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">Dashboard</h1>
+          <h1 className="text-2xl font-bold text-gray-800 mb-4 text-center sm:text-left">Dashboard</h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <StatCard
               icon={<img src={assets.doctor_icon} alt="Doctors" className="w-full h-full object-contain" />}
