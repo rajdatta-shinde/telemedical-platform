@@ -100,6 +100,15 @@ const NavBar = () => {
                 :<button onClick={()=>navigate('/login')} className='bg-primary text-white px-8 py-3 rounded-full font-light hidden md:block'>Create account</button>
             }
 
+            {/* Avatar - mobile only, decorative (actions live in the menu) */}
+            {isAuthenticated && (
+                <img
+                    className='w-8 h-8 rounded-full object-cover md:hidden'
+                    src={profileImage || assets.upload_area}
+                    alt=''
+                />
+            )}
+
             {/* Hamburger - mobile only */}
             <img
                 onClick={()=>setShowMenu(true)}
